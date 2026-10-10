@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
-import { GoogleGenAI, Type } from '@google/genai';
+import { GoogleGenAI, Type, ThinkingLevel } from '@google/genai';
 
 dotenv.config();
 
@@ -204,6 +204,7 @@ CRITICAL INSTRUCTIONS:
         systemInstruction,
         responseMimeType: 'application/json',
         responseSchema: calculusResponseSchema,
+        thinkingConfig: { thinkingLevel: ThinkingLevel.LOW },
       },
     });
 

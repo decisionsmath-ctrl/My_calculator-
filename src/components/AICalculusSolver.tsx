@@ -167,6 +167,11 @@ export const AICalculusSolver: React.FC<AICalculusSolverProps> = ({
 
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
+        if (res.status === 404) {
+          throw new Error(
+            'API endpoint not found (HTTP 404). If running on Vercel, please ensure the newly added `/api/calculus/solve.ts` and `vercel.json` are committed and redeployed.'
+          );
+        }
         throw new Error(errorData.error || `Server responded with status ${res.status}`);
       }
 
