@@ -1,0 +1,6 @@
+{
+  "name": "OmniCalc AI - Scientific & Calculus Engine",
+  "description": "Advanced AI scientific calculator with high-precision arithmetic, symbolic calculus solver, interactive 2D function plotting, and step-by-step natural language mathematical derivations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
